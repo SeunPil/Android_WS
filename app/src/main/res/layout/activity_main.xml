@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <com.ramotion.foldingcell.FoldingCell
+        android:id="@+id/folding_cell"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="17dp">
+
+        <FrameLayout
+            android:id="@+id/cell_content_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_green_dark"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                 />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:id="@+id/cell_title_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="4"
+                    android:scaleType="fitXY"
+                    android:background="@android:color/darker_gray"
+                    android:src="@drawable/ramyeon2" />
+
+<!--               #####  텍스트 레이아웃 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:weightSum="4">
+
+
+<!--                    ## 메뉴 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="#E6BE47"
+                        android:fontFamily="@font/dalseohealingbold"
+
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:gravity="left"
+
+                        android:text="5분 간단 라면 레시피" />
+
+
+<!--                    ## 소요시간-->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="#E6BE47"
+                        android:fontFamily="@font/dalseohealingbold"
+                        android:drawableLeft="@drawable/timer_re"
+                        android:drawablePadding="3dp"
+
+                        android:paddingLeft="10dp"
+                        android:paddingTop="4dp"
+
+                        android:text="소요시간 : 5 Minutes" />
+
+<!--                    ## 평점 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="#E6BE47"
+                        android:fontFamily="@font/dalseohealingbold"
+
+                        android:paddingLeft="10dp"
+                        android:paddingTop="4dp"
+
+                        android:text="메뉴 : 라면4" />
+
+<!--                    ## 음식 간단 설명 -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_weight="1"
+                        android:background="#E6BE47"
+                        android:fontFamily="@font/dalseohealingbold"
+
+                        android:paddingLeft="10dp"
+                        android:paddingTop="4dp"
+
+                        android:text="메뉴 : 라면" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </com.ramotion.foldingcell.FoldingCell>
+
+</LinearLayout>
