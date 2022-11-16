@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/dalseohealingbold"
-            android:text="30 Minutes Food"
+            android:text="30 Minutessdsdds Food"
             android:textColor="@color/white"
             android:textSize="20sp" />
 
