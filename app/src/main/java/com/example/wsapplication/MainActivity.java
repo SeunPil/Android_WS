@@ -1,8 +1,10 @@
 package com.example.wsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,12 +24,27 @@ public class MainActivity extends AppCompatActivity {
 
         // get our folding cell
         final FoldingCell fc = (FoldingCell) findViewById(R.id.folding_cell);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.board_toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+
         // attach click listener to folding cell
         fc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 fc.toggle(false);
+
             }
         });
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
+
+
     }
 }

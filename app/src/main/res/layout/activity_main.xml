@@ -5,21 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity"
-    >
+    tools:context=".MainActivity" >
+
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/board_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#E6C151"
-        app:titleTextColor="@color/white"
-        android:theme="@style/Theme.WSApplication"
-        android:fontFamily="@font/dalseohealingbold"
-        app:title="                     30 Minutes Cook"
-        />
+        android:layout_height="?actionBarSize"
+        android:background="#ff6f00"
+        app:contentInsetStart="0dp"
+        app:menu="@menu/menu_toolbar"
+        app:titleTextColor="@color/white">
+
+        <TextView
+            android:id="@+id/bar_findText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dalseohealingbold"
+            android:text="30 Minutes Food"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
 
 
+    </androidx.appcompat.widget.Toolbar>
 
     <com.ramotion.foldingcell.FoldingCell
         android:id="@+id/folding_cell"
@@ -79,13 +88,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_weight="1"
-                        android:background="#E6BE47"
+                        android:background="#ffb74d"
                         android:fontFamily="@font/dalseohealingbold"
 
                         android:paddingLeft="10dp"
                         android:paddingTop="5dp"
                         android:gravity="left"
-
+                        android:textColor="@color/black"
                         android:text="5분 간단 라면 레시피" />
 
 
@@ -94,12 +103,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_weight="1"
-                        android:background="#E6BE47"
+                        android:background="#ffb74d"
                         android:fontFamily="@font/dalseohealingbold"
 
                         android:paddingLeft="10dp"
                         android:paddingTop="4dp"
-
+                        android:textColor="@color/black"
                         android:text="소요시간 : 5 Minutes"
                         />
 
@@ -108,12 +117,12 @@
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_weight="1"
-                        android:background="#E6BE47"
+                        android:background="#ffb74d"
                         android:fontFamily="@font/dalseohealingbold"
 
                         android:paddingLeft="10dp"
                         android:paddingTop="4dp"
-
+                        android:textColor="@color/black"
                         android:text="평점 : 4.8 / 5 (193)" />
 
 <!--                    ## 음식 간단 설명 -->
@@ -121,8 +130,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="25dp"
                         android:layout_weight="1"
-                        android:background="#E6BE47"
+                        android:background="#ffb74d"
                         android:fontFamily="@font/dalseohealingbold"
+                        android:textColor="@color/black"
 
                         android:paddingLeft="10dp"
                         android:paddingTop="4dp"
