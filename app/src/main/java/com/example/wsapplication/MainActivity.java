@@ -2,6 +2,8 @@ package com.example.wsapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -13,14 +15,26 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> list;
-    Button btn_test;
     ViewFlipper v_flipper;
+    RecyclerView recyclerView;
+    Adapter adapter;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        recyclerView = (RecyclerView)findViewById(R.id.re_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+
+        adapter = new Adapter();
+        for (int i = 0; i < 100; i ++) {
+            String str = i + "번째 아이템";
+            adapter.setArrayData(str);
+        }
+
+        recyclerView.setAdapter(adapter);
 
         int images[] = {
                 R.drawable.img01,
@@ -58,4 +72,6 @@ public class MainActivity extends AppCompatActivity {
         v_flipper.setInAnimation(this,android.R.anim.slide_in_left);
         v_flipper.setOutAnimation(this,android.R.anim.slide_out_right);
     }
+
+
 }

@@ -12,7 +12,6 @@
         android:id="@+id/board_toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/white"
         app:contentInsetStart="0dp"
         app:menu="@menu/menu_toolbar"
         app:titleTextColor="@color/black">
@@ -24,7 +23,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/dalseohealingbold"
             android:text="@string/_30_minutes_food"
-            android:textColor="@color/black"
+            android:textColor="#FF9800"
             android:textSize="20sp" />
 
     </androidx.appcompat.widget.Toolbar>
@@ -37,13 +36,32 @@
         android:layout_width="match_parent"
         android:layout_height="200dp"
         tools:ignore="DuplicateIds"
-        android:layout_marginBottom="30dp"/>
+        android:layout_marginBottom="20dp"/>
 
-
-<!--  # 아이템 메뉴 레이아웃 -->
-    <LinearLayout
+<!--    레이아웃 제목-->
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="150dp">
-    </LinearLayout>
+        android:layout_height="40dp"
+        android:text="BEST MENU"
+        android:fontFamily="@font/dalseohealingbold"
+        android:textColor="#FF9800"
+        android:gravity="left"
+        android:textSize="25dp"
+        android:paddingLeft="15dp"/>
 
-</LinearLayout>
+<!--    Recyclerview-->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/re_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</RelativeLayout>
+
+        </LinearLayout>
