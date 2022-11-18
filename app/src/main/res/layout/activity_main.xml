@@ -7,15 +7,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity" >
 
-
+<!--# 툴바 -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/board_toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        android:background="#ff6f00"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
         app:contentInsetStart="0dp"
         app:menu="@menu/menu_toolbar"
-        app:titleTextColor="@color/white">
+        app:titleTextColor="@color/black">
 
         <TextView
             android:id="@+id/bar_findText"
@@ -23,127 +23,27 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/dalseohealingbold"
-            android:text="30 Minutessdsdds Food"
-            android:textColor="@color/white"
+            android:text="@string/_30_minutes_food"
+            android:textColor="@color/black"
             android:textSize="20sp" />
-
 
     </androidx.appcompat.widget.Toolbar>
 
-    <com.ramotion.foldingcell.FoldingCell
-        android:id="@+id/folding_cell"
+
+
+<!--  # 캐러셀 -->
+    <ViewFlipper
+        android:id="@+id/image_slide"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="17dp"
-        >
-
-        <FrameLayout
-            android:id="@+id/cell_content_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/holo_green_dark"
-            android:visibility="gone"
-            >
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="300dp"
-                 />
-        </FrameLayout>
+        android:layout_height="200dp"
+        tools:ignore="DuplicateIds"
+        android:layout_marginBottom="30dp"/>
 
 
-        <FrameLayout
-            android:id="@+id/cell_title_view"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            >
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:weightSum="6"
-                >
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="4"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/darker_gray"
-                    android:src="@drawable/ramyeon2"
-                    />
-
-<!--               #####  텍스트 레이아웃 -->
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:weightSum="4"
-                    >
-
-
-<!--                    ## 메뉴 -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="#ffb74d"
-                        android:fontFamily="@font/dalseohealingbold"
-
-                        android:paddingLeft="10dp"
-                        android:paddingTop="5dp"
-                        android:gravity="left"
-                        android:textColor="@color/black"
-                        android:text="5분 간단 라면 레시피" />
-
-
-<!--                    ## 소요시간-->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="#ffb74d"
-                        android:fontFamily="@font/dalseohealingbold"
-
-                        android:paddingLeft="10dp"
-                        android:paddingTop="4dp"
-                        android:textColor="@color/black"
-                        android:text="소요시간 : 5 Minutes"
-                        />
-
-<!--                    ## 평점 -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="#ffb74d"
-                        android:fontFamily="@font/dalseohealingbold"
-
-                        android:paddingLeft="10dp"
-                        android:paddingTop="4dp"
-                        android:textColor="@color/black"
-                        android:text="평점 : 4.8 / 5 (193)" />
-
-<!--                    ## 음식 간단 설명 -->
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="25dp"
-                        android:layout_weight="1"
-                        android:background="#ffb74d"
-                        android:fontFamily="@font/dalseohealingbold"
-                        android:textColor="@color/black"
-
-                        android:paddingLeft="10dp"
-                        android:paddingTop="4dp"
-
-                        android:text="누구나 쉽게 만드는 분식집 라면!" />
-
-                </LinearLayout>
-
-            </LinearLayout>
-        </FrameLayout>
-
-    </com.ramotion.foldingcell.FoldingCell>
+<!--  # 아이템 메뉴 레이아웃 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+    </LinearLayout>
 
 </LinearLayout>
