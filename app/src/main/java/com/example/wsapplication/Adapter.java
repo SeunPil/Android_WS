@@ -11,11 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<ViewHolder> {
-    private ArrayList<String> arrayList;
+    private ArrayList<PhRecyclerItem> arrayList;
 
-    public Adapter() {
-        arrayList = new ArrayList<>();
+    public Adapter(ArrayList<PhRecyclerItem> arrayList) {
+        this.arrayList = arrayList;
     }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -31,8 +32,10 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        String text = arrayList.get(position);
-        holder.textView.setText(text);
+        PhRecyclerItem Item = arrayList.get(position);
+        holder.textView.setText(Item.getTv_name2());
+        holder.imageView.setImageResource(Item.getImg_id());
+        holder.textView2.setText(Item.getTitle_text());
 
     }
 
@@ -41,7 +44,7 @@ public class Adapter extends RecyclerView.Adapter<ViewHolder> {
         return arrayList.size();
     }
 
-    public void setArrayData(String strData) {
-        arrayList.add(strData);
-    }
+
 }
+
+
