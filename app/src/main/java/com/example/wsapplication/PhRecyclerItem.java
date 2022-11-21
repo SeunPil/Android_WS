@@ -6,6 +6,7 @@ public class PhRecyclerItem {
     private int img_id;
     private String Tv_name2;
     private String title_text;
+    private Button button;
 
 
     public PhRecyclerItem(int a_img_id, String a_text, String a_title) {
@@ -16,6 +17,14 @@ public class PhRecyclerItem {
 
     public String getTitle_text() {
         return title_text;
+    }
+
+    public void setButton(Button button) {
+        this.button = button;
+    }
+
+    public void getButton(Button button) {
+        this.button = button;
     }
 
     public int getImg_id() {
@@ -36,6 +45,10 @@ public class PhRecyclerItem {
 
     public void setTitle_text(String title_text) {
         this.title_text = title_text;
+    }
+
+    public Button getButton() {
+        return button;
     }
 }
 

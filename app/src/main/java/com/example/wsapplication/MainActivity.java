@@ -31,13 +31,17 @@ public class MainActivity extends AppCompatActivity {
         adapter = new Adapter(arrayList);
 
 
+
         recyclerView.setAdapter(adapter);
 
         // 배너에 들어갈 사진 ( 배열 인덱스 순으로 아이템 생성 )
         int banner_images[] = {
-                R.drawable.img01,
-                R.drawable.img02,
-                R.drawable.img03
+                R.drawable.banner_1,
+                R.drawable.banner_2,
+                R.drawable.banner_3,
+                R.drawable.banner_4,
+                R.drawable.banner_5,
+                R.drawable.banner_6
         };
 
         // RerecylcelerView에 들어갈 사진 ( 배열 인덱스 순으로 아이템 생성 )
@@ -95,6 +99,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_toolbar, menu);
