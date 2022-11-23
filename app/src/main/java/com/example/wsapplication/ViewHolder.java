@@ -34,11 +34,21 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                Intent intent = new Intent(view.getContext(), SubActivity.class);
-//                context.startActivity(intent);
                 int pos = getAdapterPosition();
                 String text = Integer.toString(pos);
+                Intent intent;
                 Toast.makeText(context.getApplicationContext(), text, LENGTH_SHORT).show();
+                switch (pos) {
+                    case 1: text =  "1";
+                    intent = new Intent(view.getContext(), SubActivity.class);
+                    context.startActivity(intent);
+                    break;
+                    case 2: text = "2";
+                    intent = new Intent(view.getContext(), SubActivity2.class);
+                    context.startActivity(intent);
+                    break;
+                }
+
             }
         });
 

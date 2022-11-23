@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SubActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/board_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:contentInsetStart="0dp"
+        app:menu="@menu/menu_toolbar"
+        app:titleTextColor="@color/black">
+
+        <TextView
+            android:id="@+id/bar_findText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/dalseohealingbold"
+            android:text="@string/_30_minutes_food"
+            android:textColor="#FF9800"
+            android:textSize="20sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:id="@+id/recipe_image"
+        android:background="@drawable/box_border"
+        android:layout_width="match_parent"
+        android:padding="30dp"
+        android:layout_height="350dp"
+        android:scaleType="fitXY"
+        android:elevation="10dp"
+        android:src="@drawable/banner_1"/>
+
+</LinearLayout>
