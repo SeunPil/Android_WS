@@ -1,6 +1,9 @@
 package com.example.wsapplication;
 
+import static android.widget.Toast.LENGTH_SHORT;
+
 import android.content.Context;
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -9,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
 
 public class ViewHolder extends RecyclerView.ViewHolder {
     public TextView textView;
@@ -24,10 +29,18 @@ public class ViewHolder extends RecyclerView.ViewHolder {
         textView2 = itemView.findViewById(R.id.tv_title);
         button = itemView.findViewById(R.id.button);
 
+
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+//                Intent intent = new Intent(view.getContext(), SubActivity.class);
+//                context.startActivity(intent);
+                int pos = getAdapterPosition();
+                String text = Integer.toString(pos);
+                Toast.makeText(context.getApplicationContext(), text, LENGTH_SHORT).show();
+            }
+        });
+
     }
-
-    // 클릭 이벤트
-
-
-
 }

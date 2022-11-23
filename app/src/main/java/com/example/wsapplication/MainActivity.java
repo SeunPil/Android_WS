@@ -5,6 +5,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.widget.Button;
@@ -31,9 +32,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new Adapter(arrayList);
 
 
-
         recyclerView.setAdapter(adapter);
-
         // 배너에 들어갈 사진 ( 배열 인덱스 순으로 아이템 생성 )
         int banner_images[] = {
                 R.drawable.banner_1,
@@ -93,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
         for(int image : banner_images) {
             flipperImages(image);
         }
+
+
 
         // get our folding cell
         Toolbar toolbar = (Toolbar) findViewById(R.id.board_toolbar);
