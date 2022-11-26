@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".SubActivity2">
+    tools:context=".SubActivity7">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/board_toolbar"
@@ -45,7 +45,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="682 kcal"
+                android:text="723 kcal"
                 android:fontFamily="@font/dalseohealingbold"
                 android:textColor="@color/black"
                 android:textSize="15dp"
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="4.3 (227 Review)"
+                android:text="4.76 (889 Review)"
                 android:fontFamily="@font/dalseohealingbold"
                 android:textColor="@color/black"
                 android:textSize="15dp"
@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="EASY"
+                android:text="NORMAL"
                 android:fontFamily="@font/dalseohealingbold"
                 android:textColor="@color/black"
                 android:textSize="15dp"
@@ -84,7 +84,7 @@
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/jjagle"/>
+            android:src="@drawable/jeyook"/>
     </LinearLayout>
 
 
@@ -129,7 +129,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:text=" 재료 준비  \n스팸, 고춧가루, 고추장, 감자, 양파, 대파, \n물, 다진마늘, 간장, 설탕"
+                            android:text=" 재료 준비  \n앞다리살, 양퍄, 마늘, 파, 간장, 물엿, \n고추장, 고춧가루, 후추가루"
                             android:fontFamily="@font/dalseohealingbold"
                             android:textSize="17dp"
                             android:textColor="@color/black"
@@ -160,7 +160,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="1인분"
+                                android:text="2인분"
 
                                 android:fontFamily="@font/dalseohealingbold"
                                 android:gravity="center"
@@ -186,7 +186,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="5분 소요"
+                                android:text="25분 소요"
 
                                 android:fontFamily="@font/dalseohealingbold"
                                 android:gravity="center"
@@ -212,7 +212,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:text="매우 쉬움"
+                                android:text="보통"
 
                                 android:fontFamily="@font/dalseohealingbold"
                                 android:gravity="center"
@@ -243,7 +243,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="재료를 깍둑썰기로 준비해둡니다."
+                    android:text="앞다리살을 마늘, 간장, 후추가루를 넣고 재워줍니다."
                     android:gravity="center"
                     android:textSize="15dp"
                     android:fontFamily="@font/dalseohealingbold"
@@ -269,7 +269,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="비닐봉지에 스팸을 넣고 부셔주세요."
+                    android:text="고추가루 2스푼, 진간장, 마늘, 물엿을 넣고 \n양념장을 만들어줍니다."
                     android:gravity="center"
                     android:textSize="15dp"
                     android:fontFamily="@font/dalseohealingbold"
@@ -295,7 +295,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="접시에 부신 접시와 양념을 넣어서 섞어주세요."
+                    android:text="재료를 손질하고, 고기를 강불에 볶아주세요."
                     android:gravity="center"
                     android:textSize="15dp"
                     android:fontFamily="@font/dalseohealingbold"
@@ -321,7 +321,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="물 두컵과 비벼진 스팸을 넣고 끓여주세요."
+                    android:text="양파, 당근 등을 넣고 볶아주세."
                     android:gravity="center"
                     android:textSize="15dp"
                     android:fontFamily="@font/dalseohealingbold"
@@ -347,7 +347,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="짜글이를 7-10분정도 충분히 타지 않게 졸여주세요."
+                    android:text="야채가 익을 때 쯤 양념을 넣고 볶아주세요."
                     android:gravity="center"
                     android:textSize="15dp"
                     android:fontFamily="@font/dalseohealingbold"
@@ -373,15 +373,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="충분히 졸여졌으면 라면 사리 반개 및 계란을 넣어서 마무리하면 완성!."
+                    android:text="고기가 익은 후 파, 깨 등 고명을 올리면 완성!"
                     android:gravity="center"
                     android:textSize="15dp"
                     android:fontFamily="@font/dalseohealingbold"
                     android:textColor="@color/black">
 
                 </TextView>
-
             </LinearLayout>
+
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

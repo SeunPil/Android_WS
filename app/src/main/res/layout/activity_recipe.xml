@@ -27,142 +27,390 @@
 
     </androidx.appcompat.widget.Toolbar>
 
-    <ImageView
-        android:id="@+id/recipe_image"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/box_border"
-        android:padding="30dp"
-        android:scaleType="fitXY"
-        android:src="@drawable/banner_1" />
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="10dp">
+        android:background="#F6E2E2"
+        android:weightSum="2">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginRight="20dp"
-            android:weightSum="4">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:weightSum="2">
+            android:weightSum="3">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:background="@android:color/transparent" />
+                android:text="445 kcal"
+                android:fontFamily="@font/dalseohealingbold"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/box_border" />
 
-            <androidx.cardview.widget.CardView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                app:cardCornerRadius="20dp">
+                android:text="4.7 (245 Review)"
+                android:fontFamily="@font/dalseohealingbold"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/box_border" />
 
-            <ImageView
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:scaleType="fitXY"
-                android:src="@drawable/banner_3" />
-            </androidx.cardview.widget.CardView>
+                android:layout_weight="1"
+                android:text="EASY"
+                android:fontFamily="@font/dalseohealingbold"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:layout_margin="20dp"
+                android:background="@drawable/box_border" />
+
+        </LinearLayout>
+
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ramyeon"/>
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical"
+            android:weightSum="4">
+
+            <!--            1번 카드 ######### -->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:background="@drawable/edge"
+                    android:weightSum="2">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="3">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text=" 재료 준비  \n라면 1봉 (종류 상관 없음), 대파 1/2대, 계란 1알"
+                            android:fontFamily="@font/dalseohealingbold"
+                            android:textSize="17dp"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            android:background="@android:color/transparent"
+                            />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:weightSum="3">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="15dp"
+                                android:src="@drawable/icon_people"/>
+
+                            <TextView
+                                android:id="@+id/people"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="1인분"
+
+                                android:fontFamily="@font/dalseohealingbold"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:background="@android:color/transparent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="15dp"
+                                android:src="@drawable/clock"/>
+
+                            <TextView
+                                android:id="@+id/timer"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="5분 소요"
+
+                                android:fontFamily="@font/dalseohealingbold"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:background="@android:color/transparent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:padding="15dp"
+                                android:src="@drawable/level"/>
+
+                            <TextView
+                                android:id="@+id/level"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:text="매우 쉬움"
+
+                                android:fontFamily="@font/dalseohealingbold"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:background="@android:color/transparent" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
             </LinearLayout>
 
+
+            <!--            ##### 2번      -->
             <LinearLayout
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:weightSum="2">
+                android:layout_height="50dp"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:src="@drawable/img"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/transparent" />
+                    android:text="대파를 너무 두껍지 않게 썰어 줍니다."
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/dalseohealingbold"
+                    android:textColor="@color/black">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="20dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner_3" />
-                </androidx.cardview.widget.CardView>
+                </TextView>
             </LinearLayout>
 
+            <!--            ##### 2번      -->
             <LinearLayout
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:weightSum="2">
+                android:layout_height="50dp"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:src="@drawable/img_1"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/transparent" />
+                    android:text="계란은 풀어서 준비해둡니다."
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/dalseohealingbold"
+                    android:textColor="@color/black">
 
-                <androidx.cardview.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    app:cardCornerRadius="20dp">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner_3" />
-                </androidx.cardview.widget.CardView>
+                </TextView>
             </LinearLayout>
 
+            <!--            ##### 3번      -->
             <LinearLayout
                 android:layout_marginTop="30dp"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
-                android:layout_marginBottom="20dp"
-                android:orientation="horizontal"
-                android:layout_weight="1"
-                android:weightSum="2">
+                android:layout_height="50dp"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:src="@drawable/img_2"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:background="@android:color/transparent" />
+                    android:text="물 500ml, 스프, 후레이크를 넣고 끓입니다."
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/dalseohealingbold"
+                    android:textColor="@color/black">
 
-                <androidx.cardview.widget.CardView
+                </TextView>
+            </LinearLayout>
+
+            <!--            ##### 4번      -->
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:src="@drawable/img_3"/>
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    app:cardCornerRadius="20dp">
+                    android:text="고명으로 쓸 대파를 조금 남겨두고\n 냄비에 대파를 넣어 주세요."
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/dalseohealingbold"
+                    android:textColor="@color/black">
 
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:scaleType="fitXY"
-                        android:src="@drawable/banner_3" />
-                </androidx.cardview.widget.CardView>
+                </TextView>
             </LinearLayout>
 
+            <!--            ##### 5번      -->
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:src="@drawable/img_4"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="물이 끓으면 면을 넣고 끓이다가\n 살짝 덜익었을때 그릇에 담아 둡니다"
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/dalseohealingbold"
+                    android:textColor="@color/black">
+
+                </TextView>
+            </LinearLayout>
+
+            <!--            ##### 6번      -->
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:src="@drawable/img_5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="남겨진 라면 국물에 계란을 \n원을 그리듯 넣어 줍니다."
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/dalseohealingbold"
+                    android:textColor="@color/black">
+
+                </TextView>
 
 
+            </LinearLayout>
+
+            <!--            ##### 7번      -->
+            <LinearLayout
+                android:layout_marginTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="4">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:src="@drawable/img_6"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="라면에 국물을 넣어주고 \n대파를 마저 넣어주면 완성 입니다."
+                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:fontFamily="@font/dalseohealingbold"
+                    android:textColor="@color/black">
+
+                </TextView>
+
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

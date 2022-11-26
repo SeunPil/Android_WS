@@ -37,16 +37,40 @@ public class ViewHolder extends RecyclerView.ViewHolder {
                 int pos = getAdapterPosition();
                 String text = Integer.toString(pos);
                 Intent intent;
-                Toast.makeText(context.getApplicationContext(), text, LENGTH_SHORT).show();
                 switch (pos) {
-                    case 1: text =  "1";
-                    intent = new Intent(view.getContext(), SubActivity.class);
-                    context.startActivity(intent);
+                        case 1: text =  "1";
+                        intent = new Intent(view.getContext(), SubActivity2.class);
+                        context.startActivity(intent);
                     break;
-                    case 2: text = "2";
-                    intent = new Intent(view.getContext(), SubActivity2.class);
-                    context.startActivity(intent);
+                        case 2: text = "2";
+                        intent = new Intent(view.getContext(), SubActivity3.class);
+                        context.startActivity(intent);
                     break;
+                    case 3: text = "3";
+                        intent = new Intent(view.getContext(), SubActivity4.class);
+                        context.startActivity(intent);
+                        break;
+                    case 4: text = "4";
+                        intent = new Intent(view.getContext(), SubActivity5.class);
+                        context.startActivity(intent);
+                        break;
+                    case 5: text = "5";
+                        intent = new Intent(view.getContext(), SubActivity6.class);
+                        context.startActivity(intent);
+                        break;
+                    case 6: text = "6";
+                        intent = new Intent(view.getContext(), SubActivity7.class);
+                        context.startActivity(intent);
+                        break;
+                    case 7: text = "7";
+                        intent = new Intent(view.getContext(), SubActivity8.class);
+                        context.startActivity(intent);
+                        break;
+                    default:
+                        intent = new Intent(view.getContext(), SubActivity.class);
+                        context.startActivity(intent);
+                        break;
+
                 }
 
             }
