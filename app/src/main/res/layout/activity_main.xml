@@ -1,67 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
-
-<!--# 툴바 -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/board_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:contentInsetStart="0dp"
-        app:menu="@menu/menu_toolbar"
-        app:titleTextColor="@color/black">
-
-        <TextView
-            android:id="@+id/bar_findText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/dalseohealingbold"
-            android:text="@string/_30_minutes_food"
-            android:textColor="#FF9800"
-            android:textSize="20sp" />
-
-    </androidx.appcompat.widget.Toolbar>
-
-
-
-<!--  # 캐러셀 -->
-    <ViewFlipper
-        android:id="@+id/image_slide"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        tools:ignore="DuplicateIds"
-        android:layout_marginBottom="20dp"/>
-
-<!--    레이아웃 제목-->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:text="BEST MENU"
-        android:fontFamily="@font/dalseohealingbold"
-        android:textColor="#FF9800"
-        android:gravity="left"
-        android:textSize="25dp"
-        android:paddingLeft="15dp"/>
-
-<!--    Recyclerview-->
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/re_view"
+<!--# 툴바 -->
+    <RelativeLayout
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@android:color/transparent"
+            android:backgroundTint="@android:color/transparent"
+            app:menu="@menu/navi_menu"></androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="100dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="3">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <!--  # 캐러셀 -->
+        <ViewFlipper
+            android:id="@+id/image_slide"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            tools:ignore="DuplicateIds"
+            android:layout_marginBottom="20dp">
+        </ViewFlipper>
 
-</RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="BEST MENU"
+            android:fontFamily="@font/dalseohealingbold"
+            android:textColor="#FF9800"
+            android:gravity="left"
+            android:textSize="25dp"
+            android:paddingLeft="15dp"/>
 
-</LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/re_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/navi_header"
+        app:menu="@menu/navi_menu"
+        />
+
+</androidx.drawerlayout.widget.DrawerLayout>
+
