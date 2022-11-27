@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <!--    아이콘 넣어주기   -->
+
     <ImageView
         android:id="@+id/iv_image"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="50dp"
         android:layout_gravity="center"
-        />
-<!--    아이콘 넣어주기   -->
+        android:layout_marginTop="50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/people"/>
 
     <TextView
         android:id="@+id/tv_name"
@@ -21,7 +23,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:text ="홍길동"
+        android:text ="관리자_김선필"
+        android:fontFamily="@font/dalseohealingbold"
+        android:textColor="@android:color/black"
         android:textSize="20sp"/>
 
     <TextView
@@ -29,7 +33,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="20, 남자"
+        android:text ="ADMIN"
+        android:fontFamily="@font/dalseohealingbold"
+        android:textColor="@android:color/black"
         android:textSize="14sp"/>
 
 </LinearLayout>

@@ -3,7 +3,9 @@
 
     <item
         android:id="@+id/item_info"
-        android:title="내 정보" />
+        android:title="내 정보"
+        android:fontFamily="@font/dalseohealingbold"
+        android:textColor="@android:color/black"/>
     <item
         android:id="@+id/item_report"
         android:title="수익 확인" />
