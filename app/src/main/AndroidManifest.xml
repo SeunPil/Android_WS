@@ -3,10 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <application
+        android:icon="@drawable/splash_cooker"
+        android:roundIcon="@drawable/splash_cooker"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:label=""
+        android:label="@string/_30_minutes_food"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:targetApi="31">
