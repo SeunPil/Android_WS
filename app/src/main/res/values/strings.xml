@@ -1,5 +1,4 @@
 <resources>
-    <string name="app_name">30 Minutes Recipe</string>
     <string name="_30_minutes_food">30 Minutes Food</string>
     <string name="title_activity_toolbar_class">Toolbar_class</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
