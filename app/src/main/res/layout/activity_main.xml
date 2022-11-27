@@ -8,24 +8,19 @@
     android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
-<!--# 툴바 -->
-    <RelativeLayout
-        android:background="@android:color/transparent"
-        android:layout_width="wrap_content"
-        android:layout_height="50dp">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar2"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:background="@android:color/transparent"
-            android:backgroundTint="@android:color/transparent"
-            app:menu="@menu/navi_menu"></androidx.appcompat.widget.Toolbar>
-
-    </RelativeLayout>
 
     <LinearLayout
-        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            layout="@layout/toolbar"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="0dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -33,6 +28,7 @@
 
         <!--  # 캐러셀 -->
         <ViewFlipper
+            android:layout_marginTop="70dp"
             android:id="@+id/image_slide"
             android:layout_width="match_parent"
             android:layout_height="200dp"

@@ -36,11 +36,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        toolbar = (Toolbar)findViewById(R.id.toolbar2);
+        toolbar = (Toolbar)findViewById(R.id.board_toolbar2);
         setSupportActionBar(toolbar);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true); // 왼쪽 상단 버튼 만들기
-        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu_icon); //왼쪽 상단 버튼 아이콘 지정
+        getSupportActionBar().setHomeAsUpIndicator(R.drawable.menu_icon_fix_18dp); //왼쪽 상단 버튼 아이콘 지정
 
         drawerLayout = (DrawerLayout)findViewById(R.id.drawer_layout);
         navigationView = (NavigationView)findViewById(R.id.navigation_view);
@@ -124,11 +124,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
-//        return true;
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_toolbar, menu);
+        return true;
+    }
 
     // 이미지 슬라이더 구현 메서드
     public void flipperImages(int image) {

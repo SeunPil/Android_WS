@@ -3,11 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/toolbar"
+    android:id="@+id/board_toolbar2"
     app:title="@string/app_name"
     app:titleTextColor="@color/white"
     android:background="@color/purple_200"
-    app:menu="@menu/menu_toolbar"
     app:srcCompat="@drawable/ramyeon"
     >
 
